@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
   <title>
-  my test post · Remco van Dijk Personal Website
+  my test post · Remco van Dijk
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +12,17 @@
 
 
 
-<meta name="description" content="The greatest post (heading 1)Link to headingHeading 2Link to headingHeading 3Link to headingHeading 4Link to headingmodule Cat (cat) where cat :: Int -&gt; Int cat = (*1337) ">
-<meta name="keywords" content="">
+<meta name="author" content="Remco van Dijk">
+<meta name="description" content="Heading 1Link to headingHeading 2Link to headingHeading 3Link to headingHeading 4Link to headingmodule Cat (cat) where cat :: Cat cat = Cat { () } ">
+<meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"><meta name="twitter:title" content="my test post">
-<meta name="twitter:description" content="The greatest post (heading 1)Link to headingHeading 2Link to headingHeading 3Link to headingHeading 4Link to headingmodule Cat (cat) where cat :: Int -&gt; Int cat = (*1337) ">
+<meta name="twitter:description" content="Heading 1Link to headingHeading 2Link to headingHeading 3Link to headingHeading 4Link to headingmodule Cat (cat) where cat :: Cat cat = Cat { () } ">
 
 <meta property="og:url" content="https://rvandijk01.github.io/posts/mypost/">
-  <meta property="og:site_name" content="Remco van Dijk Personal Website">
+  <meta property="og:site_name" content="Remco van Dijk">
   <meta property="og:title" content="my test post">
-  <meta property="og:description" content="The greatest post (heading 1)Link to headingHeading 2Link to headingHeading 3Link to headingHeading 4Link to headingmodule Cat (cat) where cat :: Int -&gt; Int cat = (*1337) ">
+  <meta property="og:description" content="Heading 1Link to headingHeading 2Link to headingHeading 3Link to headingHeading 4Link to headingmodule Cat (cat) where cat :: Cat cat = Cat { () } ">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -48,6 +49,12 @@
 
 
 
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
 
 
  
@@ -55,9 +62,9 @@
 
 
 
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
 
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -78,7 +85,9 @@
 
 
 
-<body class="preload-transitions colorscheme-light">
+
+
+<body class="preload-transitions colorscheme-auto">
   
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
@@ -92,9 +101,28 @@
   <section class="container">
     
     <a class="navigation-title" href="https://rvandijk01.github.io/">
-      Remco van Dijk Personal Website
+      Remco van Dijk
     </a>
     
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
     
   </section>
 </nav>
@@ -122,7 +150,7 @@
             </span>
             <span class="reading-time">
               <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              One-minute read
+              
             </span>
           </div>
           
@@ -133,9 +161,9 @@
 
       <div class="post-content">
         
-        <h1 id="the-greatest-post-heading-1">
-  The greatest post (heading 1)
-  <a class="heading-link" href="#the-greatest-post-heading-1">
+        <h1 id="heading-1">
+  Heading 1
+  <a class="heading-link" href="#heading-1">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
@@ -161,10 +189,10 @@
     <span class="sr-only">Link to heading</span>
   </a>
 </h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">module</span> Cat (<span style="color:#a6e22e">cat</span>) <span style="color:#66d9ef">where</span>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#ff7b72">module</span> <span style="color:#ff7b72">Cat</span> (<span style="color:#d2a8ff;font-weight:bold">cat</span>) <span style="color:#ff7b72">where</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cat</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Int</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Int</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cat</span> <span style="color:#f92672">=</span> (<span style="color:#f92672">*</span><span style="color:#ae81ff">1337</span>)
+</span></span><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">cat</span> <span style="color:#ff7b72;font-weight:bold">::</span> <span style="color:#ff7b72">Cat</span>
+</span></span><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">cat</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">Cat</span> { () }
 </span></span></code></pre></div>
       </div>
 
@@ -193,11 +221,13 @@
   <section class="container">
     ©
     
-    2024
+      2001 -
     
+    2024
+     Remco van Dijk 
     ·
     
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+     <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
     
   </section>
 </footer>

@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Remco van Dijk Personal Website</title>
+    <title>Remco van Dijk</title>
     <link>https://rvandijk01.github.io/</link>
-    <description>Recent content on Remco van Dijk Personal Website</description>
+    <description>Recent content on Remco van Dijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 May 2024 17:04:29 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 04 May 2024 16:13:13 +0200</lastBuildDate>
     <atom:link href="https://rvandijk01.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>testing out hugo</title>
+      <link>https://rvandijk01.github.io/posts/hugo-post/</link>
+      <pubDate>Sat, 04 May 2024 16:13:13 +0200</pubDate>
+      <guid>https://rvandijk01.github.io/posts/hugo-post/</guid>
+      <description>Hugo seems pretty cool so far</description>
+    </item>
     <item>
       <title>my test post</title>
       <link>https://rvandijk01.github.io/posts/mypost/</link>
       <pubDate>Fri, 03 May 2024 17:04:29 +0200</pubDate>
       <guid>https://rvandijk01.github.io/posts/mypost/</guid>
-      <description>&#xD;The greatest post (heading 1)&#xD;Link to heading&#xD;Heading 2&#xD;Link to heading&#xD;Heading 3&#xD;Link to heading&#xD;Heading 4&#xD;Link to heading&#xD;module Cat (cat) where cat :: Int -&amp;gt; Int cat = (*1337) </description>
+      <description>&#xD;Heading 1&#xD;Link to heading&#xD;Heading 2&#xD;Link to heading&#xD;Heading 3&#xD;Link to heading&#xD;Heading 4&#xD;Link to heading&#xD;module Cat (cat) where cat :: Cat cat = Cat { () } </description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://rvandijk01.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://rvandijk01.github.io/about/</guid>
+      <description>Welcome to my about page&#xA;Placeholder image&#xA;Early Life&#xD;Link to heading&#xD;Education&#xD;Link to heading&#xD;Skills&#xD;Link to heading&#xD;</description>
     </item>
   </channel>
 </rss>
