@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>
+  MSc Thesis · Remco van Dijk
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Remco van Dijk">
+<meta name="description" content="I&rsquo;m currently doing my Master&rsquo;s thesis entitled:
+&ldquo;Fault Injection Attacks on Trusted Execution for RISC-V Cores&rdquo;
+at the CAES group at the University of Twente.
+What is Fault Injection?Link to headingI will write a proper article here when I find the time. For now, I found a nice illustration that encapsulates the concept of voltage glitching to perform a fault injection (credit to VoidStar Security):
+Why RISC-V?Link to headingFor my attack target, I&rsquo;m using hardware that implements the RISC-V open Instruction Set Architecture (ISA).">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="MSc Thesis">
+<meta name="twitter:description" content="I&rsquo;m currently doing my Master&rsquo;s thesis entitled:
+&ldquo;Fault Injection Attacks on Trusted Execution for RISC-V Cores&rdquo;
+at the CAES group at the University of Twente.
+What is Fault Injection?Link to headingI will write a proper article here when I find the time. For now, I found a nice illustration that encapsulates the concept of voltage glitching to perform a fault injection (credit to VoidStar Security):
+Why RISC-V?Link to headingFor my attack target, I&rsquo;m using hardware that implements the RISC-V open Instruction Set Architecture (ISA).">
+
+<meta property="og:url" content="https://rvandijk01.github.io/projects/msc-thesis/">
+  <meta property="og:site_name" content="Remco van Dijk">
+  <meta property="og:title" content="MSc Thesis">
+  <meta property="og:description" content="I’m currently doing my Master’s thesis entitled:
+“Fault Injection Attacks on Trusted Execution for RISC-V Cores”
+at the CAES group at the University of Twente.
+What is Fault Injection?Link to headingI will write a proper article here when I find the time. For now, I found a nice illustration that encapsulates the concept of voltage glitching to perform a fault injection (credit to VoidStar Security):
+Why RISC-V?Link to headingFor my attack target, I’m using hardware that implements the RISC-V open Instruction Set Architecture (ISA).">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2024-05-05T15:43:20+02:00">
+    <meta property="article:modified_time" content="2024-05-05T15:43:20+02:00">
+
+
+
+
+<link rel="canonical" href="https://rvandijk01.github.io/projects/msc-thesis/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.38c4552ac40f9ae3408bad40358f654ebd8804412fe74ed56f2d6c8a7af82dd3.css" integrity="sha256-OMRVKsQPmuNAi61ANY9lTr2IBEEv507Vby1sinr4LdM=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://rvandijk01.github.io/">
+      Remco van Dijk
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://rvandijk01.github.io/projects/msc-thesis/">
+          MSc Thesis
+        </a>
+      </h1>
+    </header>
+
+    <p>I&rsquo;m currently doing my Master&rsquo;s thesis entitled:</p>
+<p><strong>&ldquo;Fault Injection Attacks on Trusted Execution for RISC-V Cores&rdquo;</strong></p>
+<p>at the <a href="https://www.utwente.nl/en/eemcs/caes/"  class="external-link" target="_blank" rel="noopener">CAES group</a> at the University of Twente.</p>
+<h2 id="what-is-fault-injection">
+  What is Fault Injection?
+  <a class="heading-link" href="#what-is-fault-injection">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I will write a proper article here when I find the time. For now, I found a nice illustration that encapsulates the concept of voltage glitching to perform a fault injection (credit to <a href="https://voidstarsec.com/hw-hacking-lab/fault-injection"  class="external-link" target="_blank" rel="noopener">VoidStar Security</a>):</p>
+<p><img src="/images/glitch.gif" alt="img"></p>
+<h2 id="why-risc-v">
+  Why RISC-V?
+  <a class="heading-link" href="#why-risc-v">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>For my attack target, I&rsquo;m using hardware that implements the RISC-V open Instruction Set Architecture (ISA). This is a very new architecture which has a great advantage over other currently existing ISAs, such as x86 and ARM. Namely, its open-source nature, which allows anyone to design their processor around it with no restrictions imposed by some governing organization.</p>
+<p>I am personally a big proponent of RISC-V, as it brings a level of freedom to the hardware world that has not been seen before.</p>
+<p>In order to make it even more competitive with existing ISAs than it already is, I&rsquo;m not only aiming for interesting results in my thesis, but I&rsquo;d also like to work with RISC-V technology in industry.</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2001 -
+    
+    2024
+     Remco van Dijk 
+    ·
+    
+     <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

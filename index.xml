@@ -6,8 +6,15 @@
     <description>Recent content on Remco van Dijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 May 2024 16:13:13 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 05 May 2024 15:43:20 +0200</lastBuildDate>
     <atom:link href="https://rvandijk01.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MSc Thesis</title>
+      <link>https://rvandijk01.github.io/projects/msc-thesis/</link>
+      <pubDate>Sun, 05 May 2024 15:43:20 +0200</pubDate>
+      <guid>https://rvandijk01.github.io/projects/msc-thesis/</guid>
+      <description>I&amp;rsquo;m currently doing my Master&amp;rsquo;s thesis entitled:&#xA;&amp;ldquo;Fault Injection Attacks on Trusted Execution for RISC-V Cores&amp;rdquo;&#xA;at the CAES group at the University of Twente.&#xA;What is Fault Injection?&#xD;Link to heading&#xD;I will write a proper article here when I find the time. For now, I found a nice illustration that encapsulates the concept of voltage glitching to perform a fault injection (credit to VoidStar Security):&#xA;Why RISC-V?&#xD;Link to heading&#xD;For my attack target, I&amp;rsquo;m using hardware that implements the RISC-V open Instruction Set Architecture (ISA).</description>
+    </item>
     <item>
       <title>testing out hugo</title>
       <link>https://rvandijk01.github.io/posts/hugo-post/</link>
@@ -27,7 +34,14 @@
       <link>https://rvandijk01.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://rvandijk01.github.io/about/</guid>
-      <description>Welcome to my about page&#xA;Placeholder image&#xA;Early Life&#xD;Link to heading&#xD;Education&#xD;Link to heading&#xD;Skills&#xD;Link to heading&#xD;</description>
+      <description>Welcome to my personal website. If you&amp;rsquo;re interested, you can find various articles and information here about myself, projects I&amp;rsquo;m doing (or have done in the past) and anything else that I might find interesting to put on here.&#xA;Note that this website is a work in progress. Between writing my Master&amp;rsquo;s thesis, working as a TA and my personal life, I try to allocate some time each day to various side projects (this website being one of them).</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>https://rvandijk01.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://rvandijk01.github.io/contact/</guid>
+      <description>My preferred method of contact is my business email address.&#xA;My student email address is available for university-related communications, but keep in mind that soon I won&amp;rsquo;t have access to it anymore.&#xA;For other socials, please see the buttons on the main page.</description>
     </item>
   </channel>
 </rss>
