@@ -16,16 +16,14 @@
 <meta name="description" content="I&rsquo;m currently doing my Master&rsquo;s thesis entitled:
 &ldquo;Fault Injection Attacks on Trusted Execution for RISC-V Cores&rdquo;
 at the CAES group at the University of Twente.
-What is Fault Injection?Link to headingI will write a proper article here when I find the time. For now, I found a nice illustration that encapsulates the concept of voltage glitching to perform a fault injection (credit to VoidStar Security):
-Why RISC-V?Link to headingFor my attack target, I&rsquo;m using hardware that implements the RISC-V open Instruction Set Architecture (ISA).">
+MotivationLink to headingAs the RISC-V Instruction Set Architecture (ISA) grows in popularity, it becomes a greater target for malicious behavior. When RISC-V cores are deployed in embedded systems (which is currently the main use case), there is often a need for facilitating secure firmware updates over the air, which can be achieved by Trusted Execution.">
 <meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"><meta name="twitter:title" content="MSc Thesis">
 <meta name="twitter:description" content="I&rsquo;m currently doing my Master&rsquo;s thesis entitled:
 &ldquo;Fault Injection Attacks on Trusted Execution for RISC-V Cores&rdquo;
 at the CAES group at the University of Twente.
-What is Fault Injection?Link to headingI will write a proper article here when I find the time. For now, I found a nice illustration that encapsulates the concept of voltage glitching to perform a fault injection (credit to VoidStar Security):
-Why RISC-V?Link to headingFor my attack target, I&rsquo;m using hardware that implements the RISC-V open Instruction Set Architecture (ISA).">
+MotivationLink to headingAs the RISC-V Instruction Set Architecture (ISA) grows in popularity, it becomes a greater target for malicious behavior. When RISC-V cores are deployed in embedded systems (which is currently the main use case), there is often a need for facilitating secure firmware updates over the air, which can be achieved by Trusted Execution.">
 
 <meta property="og:url" content="https://rvandijk01.github.io/projects/msc-thesis/">
   <meta property="og:site_name" content="Remco van Dijk">
@@ -33,8 +31,7 @@ Why RISC-V?Link to headingFor my attack target, I&rsquo;m using hardware that 
   <meta property="og:description" content="I’m currently doing my Master’s thesis entitled:
 “Fault Injection Attacks on Trusted Execution for RISC-V Cores”
 at the CAES group at the University of Twente.
-What is Fault Injection?Link to headingI will write a proper article here when I find the time. For now, I found a nice illustration that encapsulates the concept of voltage glitching to perform a fault injection (credit to VoidStar Security):
-Why RISC-V?Link to headingFor my attack target, I’m using hardware that implements the RISC-V open Instruction Set Architecture (ISA).">
+MotivationLink to headingAs the RISC-V Instruction Set Architecture (ISA) grows in popularity, it becomes a greater target for malicious behavior. When RISC-V cores are deployed in embedded systems (which is currently the main use case), there is often a need for facilitating secure firmware updates over the air, which can be achieved by Trusted Execution.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="projects">
@@ -163,6 +160,15 @@ Why RISC-V?Link to headingFor my attack target, I’m using hardware that impl
     <p>I&rsquo;m currently doing my Master&rsquo;s thesis entitled:</p>
 <p><strong>&ldquo;Fault Injection Attacks on Trusted Execution for RISC-V Cores&rdquo;</strong></p>
 <p>at the <a href="https://www.utwente.nl/en/eemcs/caes/"  class="external-link" target="_blank" rel="noopener">CAES group</a> at the University of Twente.</p>
+<h2 id="motivation">
+  Motivation
+  <a class="heading-link" href="#motivation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>As the RISC-V Instruction Set Architecture (ISA) grows in popularity, it becomes a greater target for malicious behavior. When RISC-V cores are deployed in embedded systems (which is currently the main use case), there is often a need for facilitating secure firmware updates over the air, which can be achieved by Trusted Execution. However, embedded devices often operate &ldquo;in the field&rdquo;, which makes it possible for an attacker to physically attack the device, for example by messing with the supply voltage or the clock signal. This is commonly referred to as a Fault Injection (FI) attack.</p>
+<p>Therefore, this research focuses on uncovering the security implications of applying an FI attack to bypass Trusted Execution on a RISC-V core.</p>
 <h2 id="what-is-fault-injection">
   What is Fault Injection?
   <a class="heading-link" href="#what-is-fault-injection">
@@ -172,16 +178,60 @@ Why RISC-V?Link to headingFor my attack target, I’m using hardware that impl
 </h2>
 <p>I will write a proper article here when I find the time. For now, I found a nice illustration that encapsulates the concept of voltage glitching to perform a fault injection (credit to <a href="https://voidstarsec.com/hw-hacking-lab/fault-injection"  class="external-link" target="_blank" rel="noopener">VoidStar Security</a>):</p>
 <p><img src="/images/glitch.gif" alt="img"></p>
-<h2 id="why-risc-v">
-  Why RISC-V?
-  <a class="heading-link" href="#why-risc-v">
+<p>To perform the physical FI, I use the <a href="https://www.newae.com/products/nae-cwlite-arm"  class="external-link" target="_blank" rel="noopener">ChipWhisperer-Lite</a>. For my purpose, it is essentially an oscilloscope with the ability to insert a specific glitch in the clock or supply voltage, with the goal of causing a hardware fault.</p>
+<p>I use it in conjunction with either the <a href="https://rtfm.newae.com/Targets/CW308%20UFO/"  class="external-link" target="_blank" rel="noopener">CW308</a> (ASIC) or the <a href="https://rtfm.newae.com/Targets/CW305%20Artix%20FPGA/"  class="external-link" target="_blank" rel="noopener">CW305</a> (FPGA) to deploy a target chip.</p>
+<h2 id="what-is-trusted-execution">
+  What is Trusted Execution?
+  <a class="heading-link" href="#what-is-trusted-execution">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>For my attack target, I&rsquo;m using hardware that implements the RISC-V open Instruction Set Architecture (ISA). This is a very new architecture which has a great advantage over other currently existing ISAs, such as x86 and ARM. Namely, its open-source nature, which allows anyone to design their processor around it with no restrictions imposed by some governing organization.</p>
+<p>A Trusted Execution Environment (TEE) is tamper-resistant software that facilitates the secure execution of untrusted software, such as an Operating System (OS) and user-level programs. It achieves this by separating untrusted applications from each other in memory, often by using hardware-enforced mechanisms such as privilege modes and memory protection, for example using RISC-V&rsquo;s Physical Memory Protection (PMP) extension.</p>
+<h2 id="what-is-risc-v">
+  What is RISC-V?
+  <a class="heading-link" href="#what-is-risc-v">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>For my attack target, I&rsquo;m using hardware that implements the open RISC-V ISA. This is a comparatively new ISA which has a great advantage over other currently existing ISAs, such as x86 and ARM. Namely, its open-source nature, which allows anyone to design their processor around it with no restrictions imposed by some governing organization.</p>
 <p>I am personally a big proponent of RISC-V, as it brings a level of freedom to the hardware world that has not been seen before.</p>
-<p>In order to make it even more competitive with existing ISAs than it already is, I&rsquo;m not only aiming for interesting results in my thesis, but I&rsquo;d also like to work with RISC-V technology in industry.</p>
+<p>In order to make it even more competitive with existing ISAs than it already is, I&rsquo;m not only aiming for interesting results in my thesis, but I&rsquo;m also actively searching for opportunities to advance the RISC-V ecosystem.</p>
+<h2 id="preliminary-results">
+  Preliminary Results
+  <a class="heading-link" href="#preliminary-results">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>So far, I&rsquo;ve managed to replicate the state of the art and already have already made a small contribution.</p>
+<h3 id="proof-of-concept-poc-tee">
+  Proof-of-Concept (PoC) TEE
+  <a class="heading-link" href="#proof-of-concept-poc-tee">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I implemented my own PoC-TEE for a commonly used embedded RISC-V processor, namely SiFive&rsquo;s FE310. It is a very minimal implementation of a monitor (machine-mode) that switches between two applications (user-mode) and prohibits them from accessing each other&rsquo;s memory by using PMP.</p>
+<p>Unfortunately, I cannot yet publish the source code. For reference, a somewhat similar implementation can be found <a href="https://github.com/pyth0n14n/PoC-TEE"  class="external-link" target="_blank" rel="noopener">here</a>. The research that this implementation was used for also happens to be an important piece of related work.</p>
+<h3 id="the-attack-scheme">
+  The Attack Scheme
+  <a class="heading-link" href="#the-attack-scheme">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>In this research, I consider the attack performed by <a href="https://doi.org/10.46586/tches.v2022.i1.28-68"  class="external-link" target="_blank" rel="noopener">Nashimoto et al.</a> to be the state of the art.</p>
+<p>A small, but tangible contribution I&rsquo;ve made is to remove one step from the scheme, namely the Side-Channel Analysis (SCA). To determine the glitch timing, Nashimoto&rsquo;s approach requires the use of an electromagnetic probe to measure when the targeted instruction happens. On the other hand, my attack only requires a measurement of the timing by inspecting performance counters. It could be argued that this is an improvement, as my proposed attack scheme does not require specific hardware to measure EM leakage.</p>
+<h3 id="future-steps">
+  Future Steps
+  <a class="heading-link" href="#future-steps">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The next step in my research is to apply the proposed attack scheme to the <a href="https://github.com/lowRISC/ibex"  class="external-link" target="_blank" rel="noopener">Ibex</a> RISC-V core, deployed as a soft core on an FPGA. This core implements specific hardware countermeasures against FI and SCA, so it will be interesting to see the success rate compared to a core where physical attacks are not considered during its design (i.e. the FE310).</p>
 
   </article>
 </section>
