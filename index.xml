@@ -23,11 +23,11 @@
       <description>I&amp;rsquo;m currently doing my Master&amp;rsquo;s thesis entitled:&#xA;&amp;ldquo;Fault Injection Attacks on Trusted Execution for RISC-V Cores&amp;rdquo;&#xA;at the CAES group at the University of Twente.&#xA;Motivation&#xD;Link to heading&#xD;As the RISC-V Instruction Set Architecture (ISA) grows in popularity, it becomes a greater target for malicious behavior. When RISC-V cores are deployed in embedded systems (which is currently the main use case), there is often a need for facilitating secure firmware updates over the air, which can be achieved by Trusted Execution.</description>
     </item>
     <item>
-      <title>testing out hugo</title>
+      <title>My Hugo Experience</title>
       <link>https://rvandijk01.github.io/posts/hugo-post/</link>
       <pubDate>Sat, 04 May 2024 16:13:13 +0200</pubDate>
       <guid>https://rvandijk01.github.io/posts/hugo-post/</guid>
-      <description>Hugo seems pretty cool so far</description>
+      <description>What is Hugo?&#xD;Link to heading&#xD;To make this website, I have chosen to do it with Hugo. Hugo is a tool that allows you to automatically generate HTML/CSS/JavaScript code from a Markdown specification and a configuration file.&#xA;Why Hugo?&#xD;Link to heading&#xD;The reason is quite simple, I wanted to start a personal website as a side project, but dislike writing HTML/CSS/JavaScript &amp;lsquo;code&amp;rsquo;. Thus, I chose to use a tool like Hugo, since it makes the task of formatting web content trivial.</description>
     </item>
     <item>
       <title>my test post</title>
