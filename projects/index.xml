@@ -6,21 +6,21 @@
     <description>Recent content in Projects on Remco van Dijk</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 May 2024 18:38:24 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jul 2024 15:43:20 +0200</lastBuildDate>
     <atom:link href="https://rvandijk01.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MSc Thesis</title>
+      <link>https://rvandijk01.github.io/projects/msc-thesis/</link>
+      <pubDate>Mon, 29 Jul 2024 15:43:20 +0200</pubDate>
+      <guid>https://rvandijk01.github.io/projects/msc-thesis/</guid>
+      <description>Last updated: 29-7-2024&#xA;I&amp;rsquo;m currently doing my Master&amp;rsquo;s thesis entitled:&#xA;&amp;ldquo;Fault Injection Attacks on Trusted Execution for RISC-V Cores&amp;rdquo;&#xA;at the CAES group at the University of Twente.&#xA;Motivation&#xD;Link to heading&#xD;As the RISC-V Instruction Set Architecture (ISA) grows in popularity, it becomes a greater target for malicious behavior. When RISC-V cores are deployed in embedded systems (which is currently the main use case), there is often a need for facilitating secure firmware updates over the air, which can be achieved by Trusted Execution.</description>
+    </item>
     <item>
       <title>HASC-V</title>
       <link>https://rvandijk01.github.io/projects/hasc-v/</link>
       <pubDate>Wed, 08 May 2024 18:38:24 +0200</pubDate>
       <guid>https://rvandijk01.github.io/projects/hasc-v/</guid>
       <description>I&amp;rsquo;m currently working on a RISC-V simulator in Haskell as a side project. You can find more information about it on the HASC-V github page.&#xA;At some point, I will write a proper article about it here.</description>
-    </item>
-    <item>
-      <title>MSc Thesis</title>
-      <link>https://rvandijk01.github.io/projects/msc-thesis/</link>
-      <pubDate>Sun, 05 May 2024 15:43:20 +0200</pubDate>
-      <guid>https://rvandijk01.github.io/projects/msc-thesis/</guid>
-      <description>I&amp;rsquo;m currently doing my Master&amp;rsquo;s thesis entitled:&#xA;&amp;ldquo;Fault Injection Attacks on Trusted Execution for RISC-V Cores&amp;rdquo;&#xA;at the CAES group at the University of Twente.&#xA;Motivation&#xD;Link to heading&#xD;As the RISC-V Instruction Set Architecture (ISA) grows in popularity, it becomes a greater target for malicious behavior. When RISC-V cores are deployed in embedded systems (which is currently the main use case), there is often a need for facilitating secure firmware updates over the air, which can be achieved by Trusted Execution.</description>
     </item>
   </channel>
 </rss>
